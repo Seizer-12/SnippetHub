@@ -24,8 +24,12 @@ export const Header_logo = styled.img`
 
 export const Header_text = styled.p`
 	font-weight: 500;
-	font-size: 30px;
+	font-size: 20px;
 	font-family: courier;
 	color: #ffffff;
 	margin: auto 10px;
+`;
+
+export const Header_nav = styled.div`
+	font-size: 10px;
 `;
