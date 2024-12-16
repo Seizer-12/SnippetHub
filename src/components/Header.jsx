@@ -11,8 +11,8 @@ import {
 //import sniph_logo from "../assets/sniph_logo.webp";
 
 const Header = () => {
-	const [isOpen, SetIsOpen] = useState(false);
-	const toggleMenu = () => SetIsOpen(!isOpen);
+	const [isOpen, setIsOpen] = useState(false);
+	const toggleMenu = () => setIsOpen(!isOpen);
 
 	return (
 		<>

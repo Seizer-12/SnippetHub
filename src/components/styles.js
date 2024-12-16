@@ -55,14 +55,18 @@ export const Header_nav = styled.nav`
 
 	@media (max-width: 768px) {
 		display: ${(props) => (props.isOpen ? "flex" : "none")};
-		position: absolute;
 		top: 100%;
 		left: 0;
 		width: 100%;
-		background-color: #6c63ff;
-		flex-direction: column;
+		max-height: ${({ isOpen }) => (isOpen ? "200px" : "0px")};
+		transition: max-height 0.4s ease;
+		background-color: #918119;
 		gap: 1rem;
 		padding: 1rem 0;
+
+		opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+		transform: ${({ isOpen }) => (isOpen ? "scaleY(1)" : "scaleY(0.9)")};
+		transform-origin: top;
 	}
 `;
 
@@ -84,6 +88,7 @@ export const Hamburger = styled.div`
 	cursor: pointer;
 
 	div {
+		display: fixed;
 		width: 25px;
 		height: 3px;
 		background-color: #ffffff;
